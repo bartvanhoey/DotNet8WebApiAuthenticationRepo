@@ -57,11 +57,13 @@ namespace DotNet8WebApiAuthentication.Controllers
 
                var jwToken = new JwtSecurityTokenHandler().WriteToken(token);
 
-                return Ok(new
-                {
-                    token = jwToken,
-                    expiration = token.ValidTo
-                });
+                // return Ok(new
+                // {
+                //     token = jwToken,
+                //     expiration = token.ValidTo
+                // });
+
+                return Ok(new LoginResult{ AccessToken = jwToken, });
             }
             return Unauthorized();
         }
@@ -117,5 +119,16 @@ namespace DotNet8WebApiAuthentication.Controllers
 
             return Ok(new Response { Status = "Success", Message = "User created successfully!" });
         }
+    }
+
+          public class LoginResult
+    {
+        public string Email { get; set; }
+        public string Role { get; set; }
+        public string OriginalEmail { get; set; }
+        public string AccessToken { get; set; }
+        public string RefreshToken { get; set; }
+        public bool Successful { get; set; }
+        public string Error { get; set; }
     }
 }
