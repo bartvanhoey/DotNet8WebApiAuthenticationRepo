@@ -1,5 +1,6 @@
 using System.Text;
 using DotNet8WebApiAuthentication.Authentication;
+using DotNet8WebApiAuthentication.Authentication.Identity;
 using DotNet8WebApiAuthentication.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -18,10 +19,19 @@ builder.Services.AddSwaggerGen();
 // For Entity Framework
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnStr")));
 
-// For Identity
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+// Setup For Identity Old
+// builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+//     .AddEntityFrameworkStores<ApplicationDbContext>()
+//     .AddDefaultTokenProviders();
+
+// Setup For Identity
+builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddSignInManager()
     .AddDefaultTokenProviders();
+
+builder.Services.AddScoped<IdentityUserAccessor>();
 
 // Adding Authentication
 builder.Services.AddAuthentication(options =>
