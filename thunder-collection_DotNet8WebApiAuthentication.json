@@ -1,0 +1,125 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "DotNet8WebApiAuthentication",
+    "dateExported": "2023-12-02T02:14:32.613Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "cbb978d2-6c14-403f-a43a-881e7b0e6b3f",
+            "colId": "9c51c4bf-b311-4b6b-90c5-17d54731590e",
+            "containerId": "",
+            "name": "Login",
+            "url": "https://localhost:7128/api/authenticate/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-12-02T01:14:35.985Z",
+            "modified": "2023-12-02T01:38:15.742Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Username\" : \"bartvanhoeyadmin\",\n  \"Password\": \"Server2008!\"\n}\n\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5439fa64-7b31-40e2-ac73-75eb4b16ecf0",
+            "colId": "9c51c4bf-b311-4b6b-90c5-17d54731590e",
+            "containerId": "",
+            "name": "LoginAdmin",
+            "url": "https://localhost:7128/api/authenticate/login",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2023-12-02T01:37:48.258Z",
+            "modified": "2023-12-02T01:40:44.371Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Username\" : \"bartvanhoeyadmin\",\n  \"Password\": \"Server2008!\"\n}\n\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYmFydHZhbmhvZXkiLCJqdGkiOiIwOTI3Mjc0ZS1kODIyLTRiNmEtYjk3Yi1iYWI3Mzk1OWRjMGIiLCJleHAiOjE3MDE0OTE5MzIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NzEyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.Hn9SsOVjRatuQNXhpoTfl5X-9lSV9G_j9gDbQOUtnGM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "46137398-732b-4236-8727-e3963c11dcdc",
+            "colId": "9c51c4bf-b311-4b6b-90c5-17d54731590e",
+            "containerId": "",
+            "name": "Register",
+            "url": "https://localhost:7128/api/authenticate/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-12-02T01:24:51.065Z",
+            "modified": "2023-12-02T01:25:31.131Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Username\" : \"bartvanhoey\",\n  \"email\" : \"bartvanhoey@hotmail.com\",\n  \"Password\": \"Server2008!\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ba78ee40-4530-4868-90e6-93e5473b66a0",
+            "colId": "9c51c4bf-b311-4b6b-90c5-17d54731590e",
+            "containerId": "",
+            "name": "RegisterAdmin",
+            "url": "https://localhost:7128/api/authenticate/register-admin",
+            "method": "POST",
+            "sortNum": 25000,
+            "created": "2023-12-02T01:36:44.491Z",
+            "modified": "2023-12-02T01:37:43.887Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"Username\" : \"bartvanhoeyadmin\",\n  \"email\" : \"bartvanhoeyadmin@hotmail.com\",\n  \"Password\": \"Server2008!\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "937ad4ae-1027-4739-911a-8c418b8e5d60",
+            "colId": "9c51c4bf-b311-4b6b-90c5-17d54731590e",
+            "containerId": "",
+            "name": "GetWeatherForecast_NoAdmin",
+            "url": "https://localhost:7128/weatherforecast",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-12-02T01:26:32.831Z",
+            "modified": "2023-12-02T01:31:15.787Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYmFydHZhbmhvZXkiLCJqdGkiOiI5MGVlOWExNC1jNDJmLTQ5NTMtYmQ2Yy1hM2YzN2U1M2VjMWEiLCJleHAiOjE3MDE0OTE0MzEsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NzEyOCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.rSoQS0H4AHHFxgGMeqJ7KivBBYlwvGVYpnMcXlGYNRc"
+            },
+            "tests": []
+        },
+        {
+            "_id": "b9894c2b-53c4-4ff7-81ef-e24b777b5aa7",
+            "colId": "9c51c4bf-b311-4b6b-90c5-17d54731590e",
+            "containerId": "",
+            "name": "GetWeatherForecast_Admin",
+            "url": "https://localhost:7128/weatherforecastadmin",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-12-02T01:34:43.970Z",
+            "modified": "2023-12-02T02:14:10.516Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYmFydHZhbmhvZXlhZG1pbiIsImp0aSI6ImY1MmVkMGVlLWZlODctNGMzZC1iMzg1LTJkNmE3MTk0ZDlhOSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzAxNDk0MDI2LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjcxMjgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjQyMDAifQ.k-MXwQ6FPkxq7X3qgWS3O1VCPJieYapQNrNU4hBEOoU"
+            },
+            "tests": []
+        }
+    ]
+}
