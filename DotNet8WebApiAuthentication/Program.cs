@@ -20,11 +20,6 @@ builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
-// Setup For Identity Old
-// builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-//     .AddEntityFrameworkStores<ApplicationDbContext>()
-//     .AddDefaultTokenProviders();
-
 // Setup For Identity
 builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddRoles<IdentityRole>()
