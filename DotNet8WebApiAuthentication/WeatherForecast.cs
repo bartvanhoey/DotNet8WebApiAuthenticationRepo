@@ -1,5 +1,6 @@
 namespace DotNet8WebApiAuthentication
 {
+    // just a comment
     public class WeatherForecast
     {
         public DateOnly Date { get; set; }
